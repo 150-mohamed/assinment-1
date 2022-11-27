@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div id="logo">
+                <a href="HomePage.html">
+                    <img src="images/logo.png" alt="site logo">
+                    <h1> Welcome to DELL website</h1>
+                </a>
+            </div>
+        </header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="gallery">
+            <div class="gallery-content">
+                <div class="element">
+                    <img src="images/A1.jpg" alt="">
+                    <a href="#">cat</a>
+                </div>
+
+                <div class="element">
+                    <img src="images/A2.jpg" alt="">
+                    <a href="#">fox</a>
+                </div>
+
+                <div class="element">
+                    <img src="images/A3.jpg" alt="">
+                    <a href="#">dog</a>
+                </div>
+
+                <div class="element">
+                    <img src="images/A4.jpg" alt="">
+                    <a href="#">duck</a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>developed by Name</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('.element').click(function() {
+
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+        });
+
+        $('li a').click(function() {
+            $(this).parent().siblings().children().removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+
+</body>
+
+</html>
